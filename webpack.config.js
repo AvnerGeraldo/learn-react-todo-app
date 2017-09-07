@@ -21,13 +21,15 @@ module.exports = {
         new ExtractTextPlugin('app.css')
     ],
     module: {
-        loaders: [{
-            test: /.js[x]?$/,
-            loader: 'babel-loader',
-            exclude: /node_modules/,
-            query: {
-                presets: ['es2015', 'react'],
-                plugins: ['transform-object-rest-spread']
+        loaders: [
+            {
+                test: /.js[x]?$/,
+                loader: 'babel-loader',
+                exclude: /node_modules/,
+                query: {
+                    presets: ['es2015', 'react'],
+                    plugins: ['transform-object-rest-spread']
+                }
             },
             {
                 test: /\.css$/,
